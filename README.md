@@ -108,3 +108,7 @@ git commit -m "Добавить фичу"
 
 # 7. Просмотр истории
 git log --oneline
+```
+
+## Runbook
+<pre>Перед push: git status clean</pre>

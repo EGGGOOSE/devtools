@@ -1,26 +1,16 @@
-# Gradle Wrapper
+### Gradle Wrapper###
 .gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.properties
 
-# IntelliJ IDEA
-.idea/
-*.iml
-out/
-
-# OS
+### OS ###
 .DS_Store
 Thumbs.db
-
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
-.kotlin
+.directory
 
 ### IntelliJ IDEA ###
+.idea/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -53,6 +43,3 @@ bin/
 
 ### VS Code ###
 .vscode/
-
-### Mac OS ###
-.DS_Store
