@@ -75,3 +75,36 @@ src/
 
 ## Ссылка на урок
 [DVT-2 — Gradle-проект и базовый main](https://mentee-power.xl.ru/learn/QtnU6_RY1kyRRKXrbILJ2Q/theory)
+
+
+---
+
+## Git локальный цикл
+
+### Правило веток: feature/DVT‑X
+- **master** — чистая ветка для стабильных версий (не коммитим напрямую)
+- **feature/DVT‑X** — ветки под конкретные задачи (где X — номер урока)
+
+### Локальный цикл (init → commit → branch)
+```bash
+# 1. Инициализация репозитория
+git init
+
+# 2. Проверка статуса
+git status
+
+# 3. Добавление файлов в staging
+git add .
+
+# 4. Коммит в master
+git commit -m "Initial commit"
+
+# 5. Создание feature-ветки
+git checkout -b feature/DVT-3
+
+# 6. Работа в ветке → коммиты
+git add .
+git commit -m "Добавить фичу"
+
+# 7. Просмотр истории
+git log --oneline
