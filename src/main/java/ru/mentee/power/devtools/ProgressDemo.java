@@ -1,4 +1,4 @@
-package ru.mentee.power;
+package ru.mentee.power.devtools;
 
 public class ProgressDemo {
     public static void main(String[] args) {
