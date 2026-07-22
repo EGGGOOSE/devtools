@@ -1,3 +1,4 @@
+[![Java CI](https://github.com/EGGGOOSE/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/EGGGOOSE/devtools/actions/workflows/ci.yml)
 # Devtools
 
 Проект демонстрирует настройку Gradle, работу с пакетами, record и юнит-тестирование.
