@@ -15,7 +15,7 @@ public class ProgressTracker {
             totalTotal += mentees[index].totalLessons();
             index++;
         }
-        return "Суммарно: пройдено %d из %d уроков, осталось %d уроков%n".formatted(totalCompleted, totalTotal, totalTotal - totalCompleted);
+        return "Суммарно: пройдено %d из %d уроков, осталось %d уроков".formatted(totalCompleted, totalTotal, totalTotal - totalCompleted);
     }
 
     public static void main(String[] args) {
