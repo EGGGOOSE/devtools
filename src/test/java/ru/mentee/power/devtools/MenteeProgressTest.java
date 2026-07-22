@@ -1,8 +1,8 @@
 package ru.mentee.power.devtools;
 
-import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
 
 class MenteeProgressTest {
 
@@ -28,9 +28,4 @@ class MenteeProgressTest {
 
         assertThat(progress.readyForSprint()).isFalse();
     }
-
-//    @Test
-//    void shouldThrowException_whenIncorrectData(){
-//        assertThatThrownBy(() -> new Mentee("Иван", "Москва", "Backend"))
-//    }
 }

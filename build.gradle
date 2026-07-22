@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
+    id 'jacoco'
 }
 
 group = 'ru.mentee.power'
@@ -9,6 +11,8 @@ version = '1.0-SNAPSHOT'
 ext {
     junitVersion = '5.10.0'
     assertjVersion = '3.27.7'
+    checkstyleVersion = '13.8.0';
+    jacocoVersion = '0.8.15';
 }
 
 java {
@@ -34,4 +38,45 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    finalizedBy jacocoTestReport  // генерировать отчёт после тестов
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = false
+        csv.required = false
+        html.required = true
+        html.outputLocation = layout.buildDirectory.dir('reports/jacoco/test/html')
+    }
+}
+
+jacocoTestCoverageVerification {
+    dependsOn jacocoTestReport
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.80  // 80% покрытия инструкций
+            }
+        }
+    }
+}
+
+check {
+    dependsOn jacocoTestCoverageVerification
+}
+
+checkstyle {
+    toolVersion = checkstyleVersion;
+    maxErrors = 0;
+    maxWarnings = 999;
+    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml");
+}
+
+tasks.withType(Checkstyle).configureEach {
+    group = 'verification'
+}
+
+jacoco {
+    toolVersion = jacocoVersion;
 }
