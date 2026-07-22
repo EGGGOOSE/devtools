@@ -132,3 +132,6 @@ totalCompleted + mentees[idx].completedLessons()
 
 ## Ссылка на урок
 [DVT-6: Один цикл и контроль прогресса — освоение Debug](https://mentee-power.xl.ru/learn/HAQ3RkD8xES0bSalH2W5ZA/theory)
+
+## Runbook
+<pre>Перед push: git status clean</pre>
