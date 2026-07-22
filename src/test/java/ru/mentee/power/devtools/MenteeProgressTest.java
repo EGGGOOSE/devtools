@@ -1,4 +1,4 @@
-package ru.mentee.power;
+package ru.mentee.power.devtools;
 
 import org.junit.jupiter.api.Test;
 
@@ -28,4 +28,9 @@ class MenteeProgressTest {
 
         assertThat(progress.readyForSprint()).isFalse();
     }
+
+//    @Test
+//    void shouldThrowException_whenIncorrectData(){
+//        assertThatThrownBy(() -> new Mentee("Иван", "Москва", "Backend"))
+//    }
 }
