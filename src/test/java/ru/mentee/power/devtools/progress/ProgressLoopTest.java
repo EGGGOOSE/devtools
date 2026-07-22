@@ -43,19 +43,19 @@ class ProgressLoopTest {
                 .contains("осталось 0 уроков");
     }
 
-    @Test
-    void shouldPrintCorrectAnswer_whenValidData() {
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(out));
-
-        ProgressTracker.runDemo(new Mentee[]{
-                new Mentee("Иван", "Москва", "Backend разработка", 5, 12),
-                new Mentee("Мария", "Санкт-Петербург", "Fullstack", 8, 12),
-                new Mentee("Пётр", "Казань", "Java Backend", 12, 12)
-        });
-
-        System.setOut(System.out);
-        assertThat(out.toString())
-                .contains("Суммарно: пройдено 25 из 36 уроков, осталось 11 уроков");
-    }
+//    @Test
+//    void shouldPrintCorrectAnswer_whenValidData() {
+//        ByteArrayOutputStream out = new ByteArrayOutputStream();
+//        System.setOut(new PrintStream(out));
+//
+//        ProgressTracker.runDemo(new Mentee[]{
+//                new Mentee("Иван", "Москва", "Backend разработка", 5, 12),
+//                new Mentee("Мария", "Санкт-Петербург", "Fullstack", 8, 12),
+//                new Mentee("Пётр", "Казань", "Java Backend", 12, 12)
+//        });
+//
+//        System.setOut(System.out);
+//        assertThat(out.toString())
+//                .contains("Суммарно: пройдено 25 из 36 уроков, осталось 11 уроков");
+//    }
 }

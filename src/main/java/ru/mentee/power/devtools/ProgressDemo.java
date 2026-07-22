@@ -1,6 +1,6 @@
 package ru.mentee.power.devtools;
 
-public class ProgressDemo {
+public class ProgressDemo{
 
     public static void runDemo(String name, int sprint, int hours) {
         var progress = new MenteeProgress(
