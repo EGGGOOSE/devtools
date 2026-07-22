@@ -187,6 +187,7 @@ totalCompleted + mentees[idx].completedLessons()
 - **Обязателен** для публичных (`public`) классов и методов
 - Порядок тегов: `@param` → `@return` → `@throws` → `@deprecated`
 - Первая строка — **краткое описание** (с заглавной буквы)
+- Для удобства флагу severity было установлено значение "ignore"
 
 ---
 

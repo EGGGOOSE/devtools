@@ -4,7 +4,7 @@ public class ProgressDemo {
 
     public static void runDemo(String name, int sprint, int hours) {
         var progress = new MenteeProgress(
-                name,   // возьми значение из своего плана PLAN-2
+                name,
                 sprint, // номер спринта
                 hours   // запланированные часы на спринт
         );
