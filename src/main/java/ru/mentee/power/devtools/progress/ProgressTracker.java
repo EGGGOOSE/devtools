@@ -6,6 +6,10 @@ public class ProgressTracker {
      * Суммарный прогресс группы mentee.
      */
     public String calculateTotalProgress(Mentee[] mentees) {
+        if (mentees == null) {
+            throw new IllegalArgumentException("Массив mentees не может быть null");
+        }
+
         int totalLessonsCompleted = 0;
         int totalLessons = 0;
 
