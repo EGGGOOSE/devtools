@@ -6,17 +6,16 @@ public class ProgressTracker {
      * Суммарный прогресс группы mentee.
      */
     public String calculateTotalProgress(Mentee[] mentees) {
-        int index = 0;
-        int totalCompleted = 0;
-        int totalTotal = 0;
+        int totalLessonsCompleted = 0;
+        int totalLessons = 0;
 
-        while (index < mentees.length) {
-            totalCompleted += mentees[index].completedLessons();
-            totalTotal += mentees[index].totalLessons();
-            index++;
+        for (Mentee mentee : mentees) {
+            totalLessonsCompleted += mentee.completedLessons();
+            totalLessons += mentee.totalLessons();
         }
         return "Суммарно: пройдено %d из %d уроков, осталось %d уроков"
-                .formatted(totalCompleted, totalTotal, totalTotal - totalCompleted);
+                .formatted(totalLessonsCompleted, totalLessons,
+                        totalLessons - totalLessonsCompleted);
     }
 
     public static void runDemo(Mentee[] mentees) {
