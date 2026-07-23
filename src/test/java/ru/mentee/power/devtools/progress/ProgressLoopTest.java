@@ -1,6 +1,7 @@
 package ru.mentee.power.devtools.progress;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -57,5 +58,26 @@ class ProgressLoopTest {
         System.setOut(System.out);
         assertThat(out.toString())
                 .contains("Суммарно: пройдено 25 из 36 уроков, осталось 11 уроков");
+    }
+
+    @Test
+    @DisplayName("Пустой массив mentee — возвращает корректное сообщение")
+    void shouldHandleEmptyMenteeArray() {
+        ProgressTracker tracker = new ProgressTracker();
+        Mentee[] emptyArray = {};
+
+        String result = tracker.calculateTotalProgress(emptyArray);
+
+        assertThat(result)
+                .contains("пройдено 0 из 0 уроков")
+                .contains("осталось 0 уроков");
+    }
+
+    @Test
+    @DisplayName("Null — выбрасывает IllegalArgumentException")
+    void shouldThrowException() {
+        ProgressTracker tracker = new ProgressTracker();
+        assertThatThrownBy(()->tracker.calculateTotalProgress(null))
+                .isInstanceOf(IllegalArgumentException.class).hasMessageContaining("Массив mentees не может быть null");
     }
 }
