@@ -77,7 +77,8 @@ class ProgressLoopTest {
     @DisplayName("Null — выбрасывает IllegalArgumentException")
     void shouldThrowException() {
         ProgressTracker tracker = new ProgressTracker();
-        assertThatThrownBy(()->tracker.calculateTotalProgress(null))
-                .isInstanceOf(IllegalArgumentException.class).hasMessageContaining("Массив mentees не может быть null");
+        assertThatThrownBy(() -> tracker.calculateTotalProgress(null))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("Массив mentees не может быть null");
     }
 }
