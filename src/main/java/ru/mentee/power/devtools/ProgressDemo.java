@@ -15,8 +15,6 @@ public class ProgressDemo {
         } else {
             System.out.println("Status: backlog first");
         }
-
-        IO.println("Current branch: feature/DVT-3");
     }
 
     public static void main(String[] args) {
