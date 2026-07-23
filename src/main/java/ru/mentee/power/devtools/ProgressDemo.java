@@ -5,8 +5,8 @@ public class ProgressDemo {
     public static void runDemo(String name, int sprint, int hours) {
         var progress = new MenteeProgress(
                 name,
-                sprint, // номер спринта
-                hours   // запланированные часы на спринт
+                sprint,
+                hours
         );
 
         System.out.println(progress.summary());
